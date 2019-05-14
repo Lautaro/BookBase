@@ -1,0 +1,7 @@
+D:\BookBase\ExtraFunctions\obj\Debug\ExtraFunctions.csprojAssemblyReference.cache
+D:\BookBase\ExtraFunctions\obj\Debug\ExtraFunctions.csproj.CoreCompileInputs.cache
+D:\BookBase\ExtraFunctions\bin\Debug\ExtraFunctions.exe.config
+D:\BookBase\ExtraFunctions\bin\Debug\ExtraFunctions.exe
+D:\BookBase\ExtraFunctions\bin\Debug\ExtraFunctions.pdb
+D:\BookBase\ExtraFunctions\obj\Debug\ExtraFunctions.exe
+D:\BookBase\ExtraFunctions\obj\Debug\ExtraFunctions.pdb

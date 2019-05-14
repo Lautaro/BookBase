@@ -1,0 +1,6 @@
+D:\BookBase\Models\bin\Debug\Models.dll
+D:\BookBase\Models\bin\Debug\Models.pdb
+D:\BookBase\Models\obj\Debug\Models.csprojAssemblyReference.cache
+D:\BookBase\Models\obj\Debug\Models.csproj.CoreCompileInputs.cache
+D:\BookBase\Models\obj\Debug\Models.dll
+D:\BookBase\Models\obj\Debug\Models.pdb

@@ -1,0 +1,5 @@
+D:\Temp\MasterAndSub\BookBase\BookSearch\bin\Debug\BookSearch.dll
+D:\Temp\MasterAndSub\BookBase\BookSearch\bin\Debug\BookSearch.pdb
+D:\Temp\MasterAndSub\BookBase\BookSearch\obj\Debug\BookSearch.csproj.CoreCompileInputs.cache
+D:\Temp\MasterAndSub\BookBase\BookSearch\obj\Debug\BookSearch.dll
+D:\Temp\MasterAndSub\BookBase\BookSearch\obj\Debug\BookSearch.pdb

@@ -1,0 +1,77 @@
+﻿@model BookBase.ViewModels.BookSearchViewModel
+
+@{
+    ViewBag.Title = "Search";
+}
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="form-group">
+            @{
+                using (Html.BeginForm("BookSearch", "Home", FormMethod.Post))
+                {
+                    <input type="search" name="searchString" class="form-control" id="searchBox" value="@Model.SearchResult.SearchString" placeholder="Enter any words related to your search or try an authors name">
+                    <br /><input type="submit" id="search-button" value="Get me some books!" />
+                }
+            }
+        </div>
+    </div>
+    <div class="col-md-4">
+
+        @{ using (Html.BeginForm("FibonacciCheck", "Home", FormMethod.Post))
+            {
+                <h3>Fibonaccinumber test</h3>
+                <input class="form-control" type="number" value="@Model.FibonacciQuestion" placeholder="Enter nr to check " name="FibonacciNr">
+                <input type="submit" value="Check if Fibonacci" />
+                {
+                    if ((Model.FibonacciQuestion > 0))
+                    {
+                        var answer = Model.FibonacciAnswer == true ? "is a Fibonacci number!" : "is not a Fibonacci number!";
+                        <h5>@Model.FibonacciQuestion @answer </h5>
+                    }
+
+                }
+            }
+        }
+
+        @{
+            using (Html.BeginForm("EasterCheck", "Home", FormMethod.Post))
+            {
+                <h3>Calculate easter date</h3>
+                <input class="form-control" placeholder="Enter a year" type="number" name="EasterYear" pattern="\d{4}" maxlength="4" min="1583" max="2599" required>
+        
+                <input type="submit" value="Get easter date" />
+                {
+                    if(!string.IsNullOrEmpty(Model.EasterAnswer))
+                    {
+                        
+                        <h5>@Model.EasterAnswer </h5>
+                    }
+                }
+            }
+        }
+
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-10">
+        @{
+            if (Model.SearchResult != null && Model.SearchResult.BookResults != null)
+            {
+                foreach (var bookResult in Model.SearchResult.BookResults.Select(b => b.Book))
+                {
+                    <div class="card" style="width: 450px">
+                        <h4 class="card-header">@bookResult.Title - $@bookResult.Price</h4>
+                        <div class="card-body">
+                            <h6 class="card-title"><i> @bookResult.Author</i></h6>
+                            <h6 class="card-title"><b>ID:</b> @bookResult.Id.StringId</h6>
+                            <h6 class="card-title"><b>Genre:</b> @bookResult.Genre  </h6>
+                            <small id="searchInfo" class="form-text text-muted"> @bookResult.Description</small>
+                        </div>
+                    </div>
+                }
+            }}
+    </div>
+</div>
+
